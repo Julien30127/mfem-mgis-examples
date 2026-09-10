@@ -10,7 +10,8 @@ The directory is divided into three thematic subdirectories:
 
 Dedicated to analyzing code performance and scalability on a supercomputer.
 
-- **Contents:** Scripts for aggregating computation times, calculating speedup, and plotting Strong Scaling and Weak Scaling curves.
+- **Contents:** Scripts for aggregating computation times, calculating speedup, and plotting Strong Scaling and Weak Scaling curves. Not that you will have to
+split your mesh file beforehand, and slightly modify Thermomechanical.cxx. Everything is explained under this link [MeshReader]: (https://thelfer.github.io/mfem-mgis/user_guide/mesh.html)
 
 ### SolverPreconditioner
 

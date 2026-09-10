@@ -58,16 +58,16 @@ if not df_meca.empty:
             ax.bar(i + offset, val, width=bar_width, color=color_dict[precond], edgecolor="black", zorder=3)
             ax.text(i + offset, val + max_time * 0.02, f"{val:.1f}s", ha='center', va='bottom', rotation=90, fontsize=10)
             
-    ax.set_title("Solving time : Mechanics (~1 million DOFs)", fontsize=16, weight="bold")
-    ax.set_xlabel("Solver", fontsize=12, weight="bold")
-    ax.set_ylabel("Time (s)", fontsize=12, weight="bold")
+    ax.set_title("Temps de résolution : Mécanique (~1 million DDLs)", fontsize=16, weight="bold")
+    ax.set_xlabel("Solveur", fontsize=12, weight="bold")
+    ax.set_ylabel("Temps (s)", fontsize=12, weight="bold")
     
     ax.set_xticks(range(len(pivot_df.index)))
     ax.set_xticklabels(pivot_df.index, rotation=35, ha="right")
     ax.grid(axis="y", alpha=0.3, zorder=0)
     
     legend_elements = [Patch(facecolor=c, edgecolor='black', label=p) for p, c in color_dict.items()]
-    ax.legend(handles=legend_elements, title="Preconditionner", fontsize=10, title_fontsize=11, loc="upper right")
+    ax.legend(handles=legend_elements, title="Preconditionneur", fontsize=10, title_fontsize=11, loc="upper right")
     
     plt.tight_layout()
     plt.savefig("Profiling_SvPc_Mechanics_5e4.png", dpi=300, bbox_inches="tight")

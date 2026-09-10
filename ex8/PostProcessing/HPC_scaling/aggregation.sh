@@ -15,8 +15,6 @@ mechanics_calls,mechanics_min,mechanics_mean,mechanics_max,mechanics_part,\
 total" > "$OUT"
 
 
-# Extract the 5 numerical values from a timer row:
-# number Of Calls | min(s) | mean(s) | max(s) | part(%)
 extract_timer() {
     local pattern="$1"
     local file="$2"
@@ -38,8 +36,7 @@ extract_timer() {
 }
 
 
-# Main loop
-for f in $(ls Thermo_scaling_*.o | sort -V); do
+for f in $(ls ThMc_scaling_*.o | sort -V); do
 
     echo "Processing $f"
 
